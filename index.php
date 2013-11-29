@@ -31,7 +31,15 @@
                 <input type="text" placeholder="track..." class="js-trackVal"/>
                 <input type="submit" class="js-trackSubmit"/>
             </form>
-            <div id="tracker1">Tracker 1</div>
+            <div id="tracker1" class="tracker">Tracker 1</div>
+        </div>
+
+        <div class="tracker-wrapper">
+            <form>
+                <input type="text" placeholder="track..." class="js-trackVal"/>
+                <input type="submit" class="js-trackSubmit"/>
+            </form>
+            <div id="tracker2" class="tracker">Tracker 2</div>
         </div>
 
 

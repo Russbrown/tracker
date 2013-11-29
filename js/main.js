@@ -1,8 +1,9 @@
 
 $(function(){
 	$('.js-trackSubmit').bind('click', function(){
-		var trackVal = $('.js-trackVal').val();
-		trackCallout(trackVal);
+		var trackVal = $(this).siblings('.js-trackVal').val();
+		var trackID = $(this).parents('form').siblings('.tracker').attr('id');
+		getStories(trackVal, trackID);
 		$(this).parents('.tracker-wrapper').addClass('active');
 		return false;
 	});
@@ -10,12 +11,12 @@ $(function(){
 	setInterval(function(){
 		if ($('.tracker-wrapper').hasClass('active')) {
 			var trackVal = $('.js-trackVal').val();
-			trackCalloutReplace(trackVal);
+			getStoriesReplace(trackVal);
 		}
-	}, 5000);
+	}, 1200000); // Every 20 mins.. I think.
 });		
 
-function trackCallout(trackVal){
+function getStories(trackVal, trackID){
 	$.ajax({
 		url: 'grab.php',
 		cache: false,
@@ -28,14 +29,13 @@ function trackCallout(trackVal){
 			var i = 0;
 			$.each(data.responseData.results, function(index) {
 				var item = '<p><a href="' + data.responseData.results[index].unescapedUrl + '">' + data.responseData.results[index].title + '</a></p>';
-				$('#tracker1').append(item);
+				$('#' + trackID).append(item);
 			});
 		}
 	});
-
 }
 
-function trackCalloutReplace(trackVal){
+function getStoriesReplace(trackVal){
 	$.ajax({
 		url: 'grab.php',
 		cache: false,
