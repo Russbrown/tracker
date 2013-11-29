@@ -1,6 +1,4 @@
 
-
-
 $(function(){
 	$('.js-trackSubmit').bind('click', function(){
 		var trackVal = $('.js-trackVal').val();
