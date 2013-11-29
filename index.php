@@ -24,24 +24,55 @@
 
 
         <!-- Add your site or application content here -->
-        <h1>Track your News</h1>
+        <h1>Track your News, Bitch.</h1>
 
         <div class="tracker-wrapper">
             <form>
-                <input type="text" placeholder="track..." class="js-trackVal"/>
-                <input type="submit" class="js-trackSubmit"/>
+                <input type="text" placeholder="track..." class="js-trackVal input"/>
+                <input type="submit" class="js-trackSubmit submit" value="track"/>
             </form>
             <div id="tracker1" class="tracker">Tracker 1</div>
         </div>
 
         <div class="tracker-wrapper">
             <form>
-                <input type="text" placeholder="track..." class="js-trackVal"/>
-                <input type="submit" class="js-trackSubmit"/>
+                <input type="text" placeholder="track..." class="js-trackVal input"/>
+                <input type="submit" class="js-trackSubmit submit" value="track"/>
             </form>
             <div id="tracker2" class="tracker">Tracker 2</div>
         </div>
 
+        <div class="tracker-wrapper">
+            <form>
+                <input type="text" placeholder="track..." class="js-trackVal input"/>
+                <input type="submit" class="js-trackSubmit submit" value="track"/>
+            </form>
+            <div id="tracker3" class="tracker">Tracker 3</div>
+        </div>
+
+        <div class="tracker-wrapper">
+            <form>
+                <input type="text" placeholder="track..." class="js-trackVal input"/>
+                <input type="submit" class="js-trackSubmit submit" value="track"/>
+            </form>
+            <div id="tracker4" class="tracker">Tracker 4</div>
+        </div>
+
+        <div class="tracker-wrapper">
+            <form>
+                <input type="text" placeholder="track..." class="js-trackVal input"/>
+                <input type="submit" class="js-trackSubmit submit" value="track"/>
+            </form>
+            <div id="tracker5" class="tracker">Tracker 5</div>
+        </div>
+
+        <div class="tracker-wrapper">
+            <form>
+                <input type="text" placeholder="track..." class="js-trackVal input"/>
+                <input type="submit" class="js-trackSubmit submit" value="track"/>
+            </form>
+            <div id="tracker6" class="tracker">Tracker 6</div>
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>

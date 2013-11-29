@@ -214,10 +214,39 @@ textarea {
     *zoom: 1;
 }
 
+@mixin dark-bg {
+background: #3c454f; /* Old browsers */
+background: -moz-linear-gradient(top, #3c454f 0%, #06101e 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3c454f), color-stop(100%,#06101e)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #3c454f 0%,#06101e 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #3c454f 0%,#06101e 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #3c454f 0%,#06101e 100%); /* IE10+ */
+background: linear-gradient(to bottom, #3c454f 0%,#06101e 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c454f', endColorstr='#06101e',GradientType=0 ); /* IE6-9 */
+}
+
 /* ==========================================================================
-    Panel Styles
+    Tracker Styles
    ========================================================================== */
 
+.tracker-wrapper {
+    float: left;
+    width: 31%;
+    margin: 1%;
+    min-height: 300px;
+    // @include dark-bg;
+    // .input {
+    //     width: 80%;
+    //     border: none;
+    //     float: left;
+    //     background: rgba(252,255,245,1)
+    // }
+    // .submit {
+    //     width: 20%;
+    //     border: none;
+    //     background: rgba(4,99,128,0.5)
+    // }
+}
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
