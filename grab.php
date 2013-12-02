@@ -1,5 +1,5 @@
 <?php
-    $trackVal = $_REQUEST['val'];
+    $trackVal = urlencode($_REQUEST['val']);
 
     $url = "https://ajax.googleapis.com/ajax/services/search/news?" .
            "v=1.0&q=" . $trackVal . "&userip=82.71.236.173";
