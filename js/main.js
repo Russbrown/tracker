@@ -1,9 +1,17 @@
 
 $(function(){
-	$('.js-trackSubmit').bind('click', function(){
+	$('.js-trackStories').bind('click', function(){
 		var trackVal = $(this).siblings('.js-trackVal').val();
 		var trackID = $(this).parents('form').siblings('.tracker').attr('id');
 		getStories(trackVal, trackID);
+		$(this).parents('.tracker-wrapper').addClass('active');
+		return false;
+	});
+
+	$('.js-trackTweets').bind('click', function(){
+		var trackVal = $(this).siblings('.js-trackVal').val();
+		var trackID = $(this).parents('form').siblings('.tracker').attr('id');
+		getTweets(trackVal, trackID);
 		$(this).parents('.tracker-wrapper').addClass('active');
 		return false;
 	});
@@ -18,7 +26,7 @@ $(function(){
 
 function getStories(trackVal, trackID){
 	$.ajax({
-		url: 'grab.php',
+		url: 'php/grab.php',
 		cache: false,
 		data: 'val=' + trackVal,
 		dataType: 'json',
@@ -37,7 +45,7 @@ function getStories(trackVal, trackID){
 
 function getStoriesReplace(trackVal){
 	$.ajax({
-		url: 'grab.php',
+		url: 'php/grab.php',
 		cache: false,
 		data: 'val=' + trackVal,
 		dataType: 'json',
@@ -46,10 +54,31 @@ function getStoriesReplace(trackVal){
 		},
 		success:function(data){
 			var i = 0;
-			$('#tracker1').empty();
 			$.each(data.responseData.results, function(index) {
 				var item = '<p><a href="' + data.responseData.results[index].unescapedUrl + '">' + data.responseData.results[index].title + '</a></p>';
-				$('#tracker1').append(item);
+				$('#' + trackID).append(item);
+			});
+		}
+	});
+}
+
+function getTweets(trackVal, trackID){
+	$.ajax({
+		url: 'php/grabTweets.php',
+		cache: false,
+		data: 'val=' + trackVal,
+		dataType: 'json',
+		error: function(xhr, textstatus, errorThrown){
+			console.log('error');
+		},
+		success:function(data){
+			
+			// console.log(data.statuses[2].entities.urls);
+			$.each(data.statuses, function(index) {
+				if (index < 4) {
+					var item = '<p>' + data.statuses[index].text + '</a></p>';
+					$('#' + trackID).append(item);					
+				}
 			});
 		}
 	});
