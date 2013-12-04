@@ -24,7 +24,7 @@
 
 
         <!-- Add your site or application content here -->
-        <h1>Track your News, Bitch.</h1>
+        <h1>Track that shit!.</h1>
 
         <div class="tracker-wrapper">
             <form>
