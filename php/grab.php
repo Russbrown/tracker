@@ -12,9 +12,15 @@
     curl_setopt($ch, CURLOPT_REFERER, 'http://www.northerndiv.com');
     $body = curl_exec($ch);
     curl_close($ch);
-
-    // now, process the JSON string
-    echo($body);
+    
+    if (isset($_REQUEST['json']) && $_REQUEST['json']){
+    	$json = json_encode($body);
+    	echo($json->responseData->results[0]);	
+    } else {
+    	// now, process the JSON string
+    	echo($body);
+    }
+    	
     // now have some fun with the results...
 
     // var_dump($json);
