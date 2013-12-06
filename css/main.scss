@@ -225,28 +225,44 @@ background: linear-gradient(to bottom, #3c454f 0%,#06101e 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c454f', endColorstr='#06101e',GradientType=0 ); /* IE6-9 */
 }
 
+
+
+
+
+
+
+
 /* ==========================================================================
     Tracker Styles
    ========================================================================== */
 
 .tracker-wrapper {
     float: left;
-    width: 31%;
-    margin: 1%;
+    width: 33%;
     min-height: 300px;
-    // @include dark-bg;
-    // .input {
-    //     width: 80%;
-    //     border: none;
-    //     float: left;
-    //     background: rgba(252,255,245,1)
-    // }
-    // .submit {
-    //     width: 20%;
-    //     border: none;
-    //     background: rgba(4,99,128,0.5)
-    // }
+    .input {
+        width: 80%;
+        height: 40px;
+        border: none;
+        float: left;
+        background: rgba(252,255,245,1)
+    }
+    .submit {
+        width: 20%;
+        height: 40px;
+        border: none;
+        background: rgba(4,99,128,0.5)
+    }
 }
+
+.header {
+}
+
+
+
+
+
+
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.

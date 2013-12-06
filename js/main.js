@@ -35,6 +35,7 @@ $(function(){
 			}
 		});
 	}, 120000); // 1200000 =  Every 20 mins.. I think.
+	
 });		
 
 function getStories(trackVal, trackID){
