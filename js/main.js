@@ -34,8 +34,8 @@ $(function(){
 				$('#' + trackID).siblings('.timestamp').html(datetime);
 			}
 		});
-	}, 120000); // 1200000 =  Every 20 mins.. I think.
-	
+	}, 10000); // 1200000 =  Every 20 mins.. I think.
+
 });		
 
 function getStories(trackVal, trackID){

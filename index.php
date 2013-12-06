@@ -60,6 +60,7 @@ session_start();
                 <input type="submit" class="js-trackStories submit" value="track"/>
             </form>
             <div id="tracker2" class="tracker">Story Tracker 2</div>
+            <div class="timestamp"></div>
         </div>
 
         <div class="tracker-wrapper">
@@ -68,6 +69,7 @@ session_start();
                 <input type="submit" class="js-trackStories submit" value="track"/>
             </form>
             <div id="tracker3" class="tracker">Story Tracker 3</div>
+            <div class="timestamp"></div>
         </div>
 
         <div class="tracker-wrapper">
@@ -76,6 +78,7 @@ session_start();
                 <input type="submit" class="js-trackTweets submit" value="track"/>
             </form>
             <div id="tracker4" class="tracker">Tweet Tracker 4</div>
+            <div class="timestamp"></div>
         </div>
 
         <div class="tracker-wrapper">
@@ -84,6 +87,7 @@ session_start();
                 <input type="submit" class="js-trackTweets submit" value="track"/>
             </form>
             <div id="tracker5" class="tracker">Tweet Tracker 5</div>
+            <div class="timestamp"></div>
         </div>
 
         <div class="tracker-wrapper">
@@ -92,6 +96,7 @@ session_start();
                 <input type="submit" class="js-trackTweets submit" value="track"/>
             </form>
             <div id="tracker6" class="tracker">Tweet Tracker 6</div>
+            <div class="timestamp"></div>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
