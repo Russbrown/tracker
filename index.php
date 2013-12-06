@@ -29,7 +29,7 @@ session_start();
 
 
         <!-- Add your site or application content here -->
-
+        <div class="header">
         <h1>Track your News 
             <?php 
             if (isset($_SESSION['access_token'])) {
@@ -39,6 +39,10 @@ session_start();
             }
             ?>
         </h1>
+            <div class="login">
+                <a href="/php/twitter_login.php">Login</a>
+            </div>        
+        </div>
 
 
         <div class="tracker-wrapper">
@@ -47,6 +51,7 @@ session_start();
                 <input type="submit" class="js-trackStories submit" value="track"/>
             </form>
             <div id="tracker1" class="tracker">Story Tracker 1</div>
+            <div class="timestamp"></div>
         </div>
 
         <div class="tracker-wrapper">
@@ -64,7 +69,7 @@ session_start();
             </form>
             <div id="tracker3" class="tracker">Story Tracker 3</div>
         </div>
-        
+
         <div class="tracker-wrapper">
             <form>
                 <input type="text" placeholder="track..." class="js-trackVal input"/>
