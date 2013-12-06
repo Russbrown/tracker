@@ -1,3 +1,8 @@
+<?php
+session_start();
+// var_dump($_SESSION);
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -24,7 +29,17 @@
 
 
         <!-- Add your site or application content here -->
-        <h1>Track your News, Bitch.</h1>
+
+        <h1>Track your News 
+            <?php 
+            if (isset($_SESSION['access_token'])) {
+                echo (', ' . $_SESSION['access_token']['screen_name']);
+            } else {
+                echo('bitch');
+            }
+            ?>
+        </h1>
+
 
         <div class="tracker-wrapper">
             <form>
@@ -49,7 +64,7 @@
             </form>
             <div id="tracker3" class="tracker">Story Tracker 3</div>
         </div>
-
+        
         <div class="tracker-wrapper">
             <form>
                 <input type="text" placeholder="track..." class="js-trackVal input"/>
