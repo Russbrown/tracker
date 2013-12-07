@@ -34,7 +34,7 @@ $(function(){
 				$('#' + trackID).siblings('.timestamp').html(datetime);
 			}
 		});
-	}, 10000); // 1200000 =  Every 20 mins.. I think.
+	}, 1200000); // 1200000 =  Every 20 mins.. I think.
 
 });		
 
