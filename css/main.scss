@@ -287,7 +287,8 @@ body {
     height: 50px;
     h1 {
         color: #4a70e1;
-        text-shadow: 1px 1px 1px #353842;
+        text-shadow: 1px 1px 1px #000;
+        font-weight: 100;
     }
     .login {
         position: absolute;

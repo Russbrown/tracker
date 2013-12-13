@@ -31,7 +31,7 @@ session_start();
 
         <!-- Add your site or application content here -->
         <div class="header">
-        <h1>Trakr </h1>
+        <h1>Strakr</h1>
             <div class="login">
                 <a href="/php/twitter_login.php">Login</a>
             </div>        
@@ -40,7 +40,7 @@ session_start();
 
         <div class="tracker-wrapper">
             <form>
-                <input type="text" placeholder="track..." class="js-trackVal input"/>
+                <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
             <div id="tracker1" class="tracker"><!-- Story Tracker 1 --></div>
@@ -49,7 +49,7 @@ session_start();
 
         <div class="tracker-wrapper">
             <form>
-                <input type="text" placeholder="track..." class="js-trackVal input"/>
+                <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
             <div id="tracker2" class="tracker"><!-- Story Tracker 2 --></div>
@@ -58,7 +58,7 @@ session_start();
 
         <div class="tracker-wrapper">
             <form>
-                <input type="text" placeholder="track..." class="js-trackVal input"/>
+                <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
             <div id="tracker3" class="tracker"><!-- Story Tracker 3 --></div>
@@ -67,7 +67,7 @@ session_start();
 
         <div class="tracker-wrapper">
             <form>
-                <input type="text" placeholder="track..." class="js-trackVal input"/>
+                <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackTweets submit" value="Track"/>
             </form>
             <div id="tracker4" class="tracker"><!-- Tweet Tracker 4 --></div>
@@ -76,7 +76,7 @@ session_start();
 
         <div class="tracker-wrapper">
             <form>
-                <input type="text" placeholder="track..." class="js-trackVal input"/>
+                <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackTweets submit" value="Track"/>
             </form>
             <div id="tracker5" class="tracker"><!-- Tweet Tracker 5 --></div>
@@ -85,7 +85,7 @@ session_start();
 
         <div class="tracker-wrapper">
             <form>
-                <input type="text" placeholder="track..." class="js-trackVal input"/>
+                <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackTweets submit" value="Track"/>
             </form>
             <div id="tracker6" class="tracker"><!-- Tweet Tracker 6 --></div>
