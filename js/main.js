@@ -32,7 +32,7 @@ $(function(){
 				}
 			}
 		});
-	}, 1000); // 1200000 =  Every 20 mins.. I think.
+	}, 1200000); // 1200000 =  Every 20 mins.. I think.
 
 });		
 
@@ -50,7 +50,7 @@ function getStories(trackVal, trackID){
 			if ($('#' + trackID).parents('.tracker-wrapper').hasClass('active')) {
 				$('#' + trackID).empty();
 				$.each(data.responseData.results, function(index) {
-					var item = '<p><a href="' + data.responseData.results[index].unescapedUrl + '">' + data.responseData.results[index].title + '</a></p>';
+					var item = '<p><a href="' + data.responseData.results[index].unescapedUrl + '" target="_blank">' + data.responseData.results[index].title + '</a></p>';
 					$('#' + trackID).append(item);
 				});				
 			}
