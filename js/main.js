@@ -56,7 +56,6 @@ function getStories(trackVal, trackID){
 					$('#' + trackID).append(item);
 				});				
 			}
-
 		}
 	});
 }

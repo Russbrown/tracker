@@ -19,6 +19,7 @@ session_start();
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Cutive' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
         </head>
@@ -30,15 +31,7 @@ session_start();
 
         <!-- Add your site or application content here -->
         <div class="header">
-        <h1>Track your News 
-            <?php 
-            if (isset($_SESSION['access_token'])) {
-                echo (', ' . $_SESSION['access_token']['screen_name']);
-            } else {
-                echo('bitch');
-            }
-            ?>
-        </h1>
+        <h1>Trakr </h1>
             <div class="login">
                 <a href="/php/twitter_login.php">Login</a>
             </div>        
@@ -48,54 +41,54 @@ session_start();
         <div class="tracker-wrapper">
             <form>
                 <input type="text" placeholder="track..." class="js-trackVal input"/>
-                <input type="submit" class="js-trackStories submit" value="track"/>
+                <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
-            <div id="tracker1" class="tracker">Story Tracker 1</div>
+            <div id="tracker1" class="tracker"><!-- Story Tracker 1 --></div>
             <div class="timestamp"></div>
         </div>
 
         <div class="tracker-wrapper">
             <form>
                 <input type="text" placeholder="track..." class="js-trackVal input"/>
-                <input type="submit" class="js-trackStories submit" value="track"/>
+                <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
-            <div id="tracker2" class="tracker">Story Tracker 2</div>
+            <div id="tracker2" class="tracker"><!-- Story Tracker 2 --></div>
             <div class="timestamp"></div>
         </div>
 
         <div class="tracker-wrapper">
             <form>
                 <input type="text" placeholder="track..." class="js-trackVal input"/>
-                <input type="submit" class="js-trackStories submit" value="track"/>
+                <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
-            <div id="tracker3" class="tracker">Story Tracker 3</div>
+            <div id="tracker3" class="tracker"><!-- Story Tracker 3 --></div>
             <div class="timestamp"></div>
         </div>
 
         <div class="tracker-wrapper">
             <form>
                 <input type="text" placeholder="track..." class="js-trackVal input"/>
-                <input type="submit" class="js-trackTweets submit" value="track"/>
+                <input type="submit" class="js-trackTweets submit" value="Track"/>
             </form>
-            <div id="tracker4" class="tracker">Tweet Tracker 4</div>
+            <div id="tracker4" class="tracker"><!-- Tweet Tracker 4 --></div>
             <div class="timestamp"></div>
         </div>
 
         <div class="tracker-wrapper">
             <form>
                 <input type="text" placeholder="track..." class="js-trackVal input"/>
-                <input type="submit" class="js-trackTweets submit" value="track"/>
+                <input type="submit" class="js-trackTweets submit" value="Track"/>
             </form>
-            <div id="tracker5" class="tracker">Tweet Tracker 5</div>
+            <div id="tracker5" class="tracker"><!-- Tweet Tracker 5 --></div>
             <div class="timestamp"></div>
         </div>
 
         <div class="tracker-wrapper">
             <form>
                 <input type="text" placeholder="track..." class="js-trackVal input"/>
-                <input type="submit" class="js-trackTweets submit" value="track"/>
+                <input type="submit" class="js-trackTweets submit" value="Track"/>
             </form>
-            <div id="tracker6" class="tracker">Tweet Tracker 6</div>
+            <div id="tracker6" class="tracker"><!-- Tweet Tracker 6 --></div>
             <div class="timestamp"></div>
         </div>
 
