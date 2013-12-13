@@ -45,7 +45,7 @@ session_start();
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
-            <div id="tracker1" class="tracker"><!-- Story Tracker 1 --></div>
+            <div id="tracker1" class="tracker stories"><!-- Story Tracker 1 --></div>
             <div class="timestamp"></div>
         </div>
 
@@ -54,7 +54,7 @@ session_start();
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
-            <div id="tracker2" class="tracker"><!-- Story Tracker 2 --></div>
+            <div id="tracker2" class="tracker stories"><!-- Story Tracker 2 --></div>
             <div class="timestamp"></div>
         </div>
 
@@ -63,7 +63,7 @@ session_start();
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
-            <div id="tracker3" class="tracker"><!-- Story Tracker 3 --></div>
+            <div id="tracker3" class="tracker stories"><!-- Story Tracker 3 --></div>
             <div class="timestamp"></div>
         </div>
 
@@ -72,7 +72,7 @@ session_start();
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackTweets submit" value="Track"/>
             </form>
-            <div id="tracker4" class="tracker"><!-- Tweet Tracker 4 --></div>
+            <div id="tracker4" class="tracker tweets"><!-- Tweet Tracker 4 --></div>
             <div class="timestamp"></div>
         </div>
 
@@ -81,7 +81,7 @@ session_start();
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackTweets submit" value="Track"/>
             </form>
-            <div id="tracker5" class="tracker"><!-- Tweet Tracker 5 --></div>
+            <div id="tracker5" class="tracker tweets"><!-- Tweet Tracker 5 --></div>
             <div class="timestamp"></div>
         </div>
 
@@ -90,7 +90,7 @@ session_start();
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackTweets submit" value="Track"/>
             </form>
-            <div id="tracker6" class="tracker"><!-- Tweet Tracker 6 --></div>
+            <div id="tracker6" class="tracker tweets"><!-- Tweet Tracker 6 --></div>
             <div class="timestamp"></div>
         </div>
 

@@ -25,19 +25,14 @@ $(function(){
 				// if its active refresh the stories
 				var trackVal = $(this).children('form').children('.js-trackVal').val();
 				var trackID = $(this).children('form').siblings('.tracker').attr('id');
-				getStories(trackVal, trackID);
-				// and timestamp the update
-				var currentdate = new Date(); 
-				var datetime = "Last update: " + currentdate.getDate() + "/"
-				                + (currentdate.getMonth()+1)  + "/" 
-				                + currentdate.getFullYear() + " @ "  
-				                + currentdate.getHours() + ":"  
-				                + currentdate.getMinutes() + ":" 
-				                + currentdate.getSeconds();
-				$('#' + trackID).siblings('.timestamp').html(datetime);
+				if ($(this).hasClass('stories')) {
+					getStories(trackVal, trackID);
+				} else if ($(this).hasClass('tweets')) {
+					getTweets(trackVal, trackID);
+				}
 			}
 		});
-	}, 1200000); // 1200000 =  Every 20 mins.. I think.
+	}, 1000); // 1200000 =  Every 20 mins.. I think.
 
 });		
 
@@ -59,6 +54,12 @@ function getStories(trackVal, trackID){
 					$('#' + trackID).append(item);
 				});				
 			}
+			// and timestamp the update
+			var currentdate = new Date(); 
+			var datetime = "Last update at " 
+			                + currentdate.getHours() + ":"  
+			                + currentdate.getMinutes()
+			$('#' + trackID).siblings('.timestamp').html(datetime);
 		}
 	});
 }
@@ -104,6 +105,12 @@ function getTweets(trackVal, trackID){
 					$('#' + trackID).append(item);					
 				}
 			});
+			// and timestamp the update
+			var currentdate = new Date(); 
+			var datetime = "Last update at " 
+			                + currentdate.getHours() + ":"  
+			                + currentdate.getMinutes()
+			$('#' + trackID).siblings('.timestamp').html(datetime);
 		}
 	});
 }
