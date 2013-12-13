@@ -244,7 +244,8 @@ body {
 .tracker-wrapper {
     float: left;
     width: 33.25%;
-    min-height: 330px;
+    height: 300px;
+    overflow: scroll;
     @include dark-bg;
     border: 1px solid #2a2c32;
     border-left: none;
@@ -276,6 +277,10 @@ body {
     }
     .tracker {
         padding: 0 1em;
+        p {
+            color: #cdd0de;
+            font-size: 0.9em;
+        }
         p a {
             color: #cdd0de;
             text-decoration: none;
@@ -284,11 +289,13 @@ body {
 }
 .header {
     padding: 0 1em 0.5em;
-    height: 50px;
+    height: 35px;
     h1 {
         color: #4a70e1;
         text-shadow: 1px 1px 1px #000;
         font-weight: 100;
+        font-size: 1.5em;
+
     }
     .login {
         position: absolute;

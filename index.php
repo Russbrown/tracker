@@ -19,7 +19,9 @@ session_start();
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/introjs.min.css">
         <link href='http://fonts.googleapis.com/css?family=Cutive' rel='stylesheet' type='text/css'>
+
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
         </head>
@@ -31,15 +33,15 @@ session_start();
 
         <!-- Add your site or application content here -->
         <div class="header">
-        <h1>Strakr</h1>
+        <h1>Trakrific</h1>
             <div class="login">
                 <a href="/php/twitter_login.php">Login</a>
             </div>        
         </div>
 
 
-        <div class="tracker-wrapper">
-            <form>
+        <div class="tracker-wrapper" >
+            <form data-position="right" data-intro="Ok lets get started, first why not track your football team..." data-step="1">
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
@@ -47,8 +49,8 @@ session_start();
             <div class="timestamp"></div>
         </div>
 
-        <div class="tracker-wrapper">
-            <form>
+        <div class="tracker-wrapper" >
+            <form data-position="right" data-intro="..then your city..." data-step="2">
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
@@ -57,7 +59,7 @@ session_start();
         </div>
 
         <div class="tracker-wrapper">
-            <form>
+            <form data-position="left" data-intro="...then something you're interested in. Like err...Yoga?" data-step="3">
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
@@ -96,6 +98,7 @@ session_start();
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.min.js"></script>
+        <script src="js/intro.min.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

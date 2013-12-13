@@ -15,6 +15,9 @@ $(function(){
 		return false;
 	});
 
+	// if user is not logged in then run the intro
+	introJs().start();
+
 	setInterval(function(){
 		// iterate through the trackers
 		$('.tracker-wrapper').each(function(){
@@ -94,6 +97,7 @@ function getTweets(trackVal, trackID){
 		success:function(data){
 			
 			// console.log(data.statuses[2].entities.urls);
+			$('#' + trackID).empty();
 			$.each(data.statuses, function(index) {
 				if (index < 4) {
 					var item = '<p>' + data.statuses[index].text + '</a></p>';
