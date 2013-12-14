@@ -4,8 +4,8 @@ $(function(){
 		var trackID = $(this).parents('form').siblings('.tracker').attr('id');
 		getStories(trackVal, trackID);
 		$(this).parents('.tracker-wrapper').addClass('active');
-		// Save data to the current session's store
-		sessionStorage.setItem(trackID, trackVal);
+		// Save data to the current local's store
+		localStorage.setItem(trackID, trackVal);
 		return false;
 	});
 
@@ -14,17 +14,17 @@ $(function(){
 		var trackID = $(this).parents('form').siblings('.tracker').attr('id');
 		getTweets(trackVal, trackID);
 		$(this).parents('.tracker-wrapper').addClass('active');
-		// Save data to the current session's store
-		sessionStorage.setItem(trackID, trackVal);
+		// Save data to the current local's store
+		localStorage.setItem(trackID, trackVal);
 		return false;
 	});
 
 	// See if we have a trakr set
-	if ((sessionStorage.getItem('tracker1')) || (sessionStorage.getItem('tracker2')) || (sessionStorage.getItem('tracker3'))) {
+	if ((localStorage.getItem('tracker1')) || (localStorage.getItem('tracker2')) || (localStorage.getItem('tracker3'))) {
 		// Restore the contents of the trakr field
-		for(var i = 0; i < sessionStorage.length; i++) {  // Length gives the # of pairs
-		    var trackID = sessionStorage.key(i);             // Get the name of pair i
-		    var trackVal = sessionStorage.getItem(trackID);
+		for(var i = 0; i < localStorage.length; i++) {  // Length gives the # of pairs
+		    var trackID = localStorage.key(i);             // Get the name of pair i
+		    var trackVal = localStorage.getItem(trackID);
 			$('#' + trackID).siblings('form').children('.js-trackVal').val(trackVal);
 			$('#' + trackID).parents('.tracker-wrapper').addClass('active');
 			if ($('#' + trackID).hasClass('stories')) {
