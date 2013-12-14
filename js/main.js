@@ -47,7 +47,7 @@ $(function(){
 				}
 			}
 		});
-	}, 1000); // 1200000 =  Every 20 mins.. I think.
+	}, 1200000); // 1200000 =  Every 20 mins.. I think.
 
 });		
 
