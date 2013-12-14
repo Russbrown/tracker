@@ -4,6 +4,8 @@ $(function(){
 		var trackID = $(this).parents('form').siblings('.tracker').attr('id');
 		getStories(trackVal, trackID);
 		$(this).parents('.tracker-wrapper').addClass('active');
+		// Save data to the current session's store
+		sessionStorage.setItem(trackID, trackVal);
 		return false;
 	});
 
@@ -15,8 +17,21 @@ $(function(){
 		return false;
 	});
 
-	// if user is not logged in then run the intro
-	introJs().start();
+	// See if we have a trakr set
+	if ((sessionStorage.getItem('tracker1')) || (sessionStorage.getItem('tracker2')) || (sessionStorage.getItem('tracker3'))) {
+		// Restore the contents of the trakr field
+		for(var i = 0; i < sessionStorage.length; i++) {  // Length gives the # of pairs
+		    var trackID = sessionStorage.key(i);             // Get the name of pair i
+		    var trackVal = sessionStorage.getItem(trackID);
+		    console.log(trackID);
+			$('#' + trackID).siblings('form').children('.js-trackVal').val(trackVal);
+			$('#' + trackID).parents('.tracker-wrapper').addClass('active');
+			getStories(trackVal, trackID);
+		}
+	} else {
+		// they are new, so run the intro
+		introJs().start();		
+	}
 
 	setInterval(function(){
 		// iterate through the trackers
@@ -32,7 +47,7 @@ $(function(){
 				}
 			}
 		});
-	}, 1200000); // 1200000 =  Every 20 mins.. I think.
+	}, 1000); // 1200000 =  Every 20 mins.. I think.
 
 });		
 
