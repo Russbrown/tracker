@@ -14,6 +14,8 @@ $(function(){
 		var trackID = $(this).parents('form').siblings('.tracker').attr('id');
 		getTweets(trackVal, trackID);
 		$(this).parents('.tracker-wrapper').addClass('active');
+		// Save data to the current session's store
+		sessionStorage.setItem(trackID, trackVal);
 		return false;
 	});
 
@@ -23,10 +25,14 @@ $(function(){
 		for(var i = 0; i < sessionStorage.length; i++) {  // Length gives the # of pairs
 		    var trackID = sessionStorage.key(i);             // Get the name of pair i
 		    var trackVal = sessionStorage.getItem(trackID);
-		    console.log(trackID);
 			$('#' + trackID).siblings('form').children('.js-trackVal').val(trackVal);
 			$('#' + trackID).parents('.tracker-wrapper').addClass('active');
-			getStories(trackVal, trackID);
+			if ($('#' + trackID).hasClass('stories')) {
+				getStories(trackVal, trackID);				
+			} else if ($('#' + trackID).hasClass('tweets')) {
+				getTweets(trackVal, trackID);
+			}
+
 		}
 	} else {
 		// they are new, so run the intro
