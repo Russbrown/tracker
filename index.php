@@ -21,6 +21,8 @@ session_start();
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/introjs.min.css">
         <link href='http://fonts.googleapis.com/css?family=Cutive' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
@@ -69,6 +71,7 @@ session_start();
 
         <div class="tracker-wrapper">
             <form>
+                <i class="fa fa-twitter-square fa-lg"></i>
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackTweets submit" value="Track"/>
             </form>
@@ -78,6 +81,7 @@ session_start();
 
         <div class="tracker-wrapper">
             <form>
+                <i class="fa fa-twitter-square fa-lg"></i>
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackTweets submit" value="Track"/>
             </form>
@@ -87,6 +91,7 @@ session_start();
 
         <div class="tracker-wrapper">
             <form>
+                <i class="fa fa-twitter-square fa-lg"></i>
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackTweets submit" value="Track"/>
             </form>

@@ -22,7 +22,7 @@ $(function(){
 	// See if we have a trakr set
 	if ((localStorage.getItem('tracker1')) || (localStorage.getItem('tracker2')) || (localStorage.getItem('tracker3'))) {
 		// Restore the contents of the trakr field
-		for(var i = 0; i < localStorage.length; i++) {  // Length gives the # of pairs
+		for(var i = 0; i < localStorage.length; i++) {     // Length gives the # of pairs
 		    var trackID = localStorage.key(i);             // Get the name of pair i
 		    var trackVal = localStorage.getItem(trackID);
 			$('#' + trackID).siblings('form').children('.js-trackVal').val(trackVal);
@@ -46,9 +46,9 @@ $(function(){
 				// if its active refresh the stories
 				var trackVal = $(this).children('form').children('.js-trackVal').val();
 				var trackID = $(this).children('form').siblings('.tracker').attr('id');
-				if ($(this).hasClass('stories')) {
+				if ($(this).children('.tracker').hasClass('stories')) {
 					getStories(trackVal, trackID);
-				} else if ($(this).hasClass('tweets')) {
+				} else if ($(this).children('.tracker').hasClass('tweets')) {
 					getTweets(trackVal, trackID);
 				}
 			}
@@ -81,28 +81,6 @@ function getStories(trackVal, trackID){
 			                + currentdate.getHours() + ":"  
 			                + currentdate.getMinutes()
 			$('#' + trackID).siblings('.timestamp').html(datetime);
-		}
-	});
-}
-
-function getStoriesReplace(trackVal){
-	$.ajax({
-		url: 'php/grab.php',
-		cache: false,
-		data: 'val=' + trackVal,
-		dataType: 'json',
-		error: function(xhr, textstatus, errorThrown){
-			console.log('error');
-		},
-		success:function(data){
-			var i = 0;
-			if ($('#' + trackID).parents('.tracker-wrapper').hasClass('active')) {
-				$('#' + trackID).empty();
-				$.each(data.responseData.results, function(index) {
-					var item = '<p><a href="' + data.responseData.results[index].unescapedUrl + '">' + data.responseData.results[index].title + '</a></p>';
-					$('#' + trackID).append(item);
-				});				
-			}
 		}
 	});
 }
