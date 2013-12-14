@@ -43,7 +43,7 @@ session_start();
 
 
         <div class="tracker-wrapper" >
-            <form data-position="right" data-intro="Ok lets get started, first why not track your football team..." data-step="1">
+            <form data-position="bottom" data-intro="Ok lets get started, first why not track your football team..." data-step="1">
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
@@ -52,7 +52,7 @@ session_start();
         </div>
 
         <div class="tracker-wrapper" >
-            <form data-position="right" data-intro="..then your city..." data-step="2">
+            <form data-position="bottom" data-intro="..then your city..." data-step="2">
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
@@ -61,7 +61,7 @@ session_start();
         </div>
 
         <div class="tracker-wrapper">
-            <form data-position="left" data-intro="...then something you're interested in. Like err...Yoga?" data-step="3">
+            <form data-position="bottom" data-intro="...then something you're interested in. Like err...Yoga?" data-step="3">
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
