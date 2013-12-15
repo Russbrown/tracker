@@ -251,7 +251,7 @@ body {
     border-left: none;
     border-bottom: none;
     .input {
-        width: 75%;
+        width: 77%;
         height: 40px;
         border: none;
         float: left;
@@ -259,17 +259,27 @@ body {
         color: #8d9099;
         text-indent: 1em;
         font-family: 'Cutive', sans-serif;
-        padding-top: 5px;
+        padding: 5px 0 0 0;
+        margin: 0 0 0 0;
+        // padding-right: 0 ;
+        // padding-left: 0 ;
+        -webkit-appearance: none;
+        border-radius: 0;
     }
     .submit {
-        width: 24%;
-        height: 46px;
+        width: 23%;
+        height: 45px;
         border: none;
         background: #4a70e1;
         color: #cdd0de;
         @include shadow;
         font-family: 'Cutive', sans-serif;
-        padding-top: 5px;
+        padding: 5px 0 0 0;
+        margin: 0 0 0 0;
+        // padding-right: 0 ;
+        // padding-left: 0 ;
+        -webkit-appearance: none;
+        border-radius: 0;
     }
     form {
         width: 95%;
@@ -308,6 +318,15 @@ body {
         position: absolute;
         top: 0;
         right: 0;
+        width: 80px;
+        height: 30px;
+        background: #cdd0de;
+        text-align: center;
+        a {
+            color: #4a70e1;
+            text-decoration: none;
+            line-height: 30px;
+        }
     }
 }
 .timestamp {

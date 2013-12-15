@@ -36,9 +36,9 @@ session_start();
         <!-- Add your site or application content here -->
         <div class="header">
         <h1>Trakrific</h1>
-            <div class="login">
-                <a href="/php/twitter_login.php">Login</a>
-            </div>        
+<!--             <div class="login">
+                <a href="/php/twitter_login.php">Log in</a>
+            </div>  -->       
         </div>
 
 
