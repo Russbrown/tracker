@@ -98,6 +98,8 @@ function getTweets(trackVal, trackID){
 			$('#' + trackID).empty();
 			$.each(data.statuses, function(index) {
 				if (index < 4) {
+						// console.log(data.statuses[index].entities.media[0].url);
+						console.log('deployed');
 						var item = 
 							'<p><a href="' + 
 							data.statuses[index].entities.media[0].url + 
