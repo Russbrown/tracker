@@ -95,13 +95,16 @@ function getTweets(trackVal, trackID){
 			console.log('error');
 		},
 		success:function(data){
-			
-			// console.log(data.statuses[2].entities.urls);
 			$('#' + trackID).empty();
 			$.each(data.statuses, function(index) {
 				if (index < 4) {
-					var item = '<p>' + data.statuses[index].text + '</a></p>';
-					$('#' + trackID).append(item);					
+						var item = 
+							'<p><a href="' + 
+							data.statuses[index].entities.media[0].url + 
+							'" target="_blank">' + 
+							data.statuses[index].text + 
+							'</p>';
+						$('#' + trackID).append(item);			
 				}
 			});
 			// and timestamp the update

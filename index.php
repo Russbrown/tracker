@@ -43,7 +43,7 @@ session_start();
 
 
         <div class="tracker-wrapper" >
-            <form data-position="bottom" data-intro="Ok lets get started, first why not track your football team..." data-step="1">
+            <form data-position="bottom" data-intro="Ok let's get started, first why not track your football team..." data-step="1">
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
@@ -106,13 +106,16 @@ session_start();
         <script src="js/intro.min.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-46491879-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
         </script>
     </body>
 </html>
