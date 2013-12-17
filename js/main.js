@@ -67,11 +67,12 @@ function getStories(trackVal, trackID){
 			console.log('error');
 		},
 		success:function(data){
+			console.log(data);
 			var i = 0;
 			if ($('#' + trackID).parents('.tracker-wrapper').hasClass('active')) {
 				$('#' + trackID).empty();
 				$.each(data.responseData.results, function(index) {
-					var item = '<p><a href="' + data.responseData.results[index].unescapedUrl + '" target="_blank">' + data.responseData.results[index].title + '</a></p>';
+					var item = '<p><a href="' + data.responseData.results[index].unescapedUrl + '" target="_blank">' + data.responseData.results[index].title + '</a></br><small>' + data.responseData.results[index].publisher + '</small></p>';
 					$('#' + trackID).append(item);
 				});				
 			}
@@ -98,8 +99,6 @@ function getTweets(trackVal, trackID){
 			$('#' + trackID).empty();
 			$.each(data.statuses, function(index) {
 				if (index < 4) {
-						// console.log(data.statuses[index].entities.media[0].url);
-						console.log('deployed');
 						var item = 
 							'<p><a href="' + 
 							data.statuses[index].entities.media[0].url + 
