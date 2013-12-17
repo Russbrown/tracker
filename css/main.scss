@@ -248,10 +248,12 @@ body {
 a {
     color: $pale-blue;
     text-decoration: none;
+    transition: color, 1s;
 }
 
 a:hover {
     color: $light-grey;
+    transition: color, 1s;
 }
 
 
@@ -331,19 +333,27 @@ a:hover {
         font-size: 1.5em;
 
     }
-    .login {
+    .tab {
         position: absolute;
-        top: 0;
-        right: 0;
         width: 80px;
         height: 30px;
         background: $pale-blue;
         text-align: center;
+        @include shadow;
         a {
             color: $blue;
             text-decoration: none;
             line-height: 30px;
+            font-size: 0.8em;
         }
+    }
+    .tab.login {
+        top: 0;
+        right: 0;
+    }
+    .tab.bug {
+        top: 0;
+        right: 90px;
     }
 }
 .timestamp {
