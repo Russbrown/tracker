@@ -256,6 +256,17 @@ a:hover {
     transition: color, 1s;
 }
 
+h1 {
+    color: $blue;
+    text-shadow: 1px 1px 1px #000;
+    font-weight: 100;
+    font-size: 1.5em;
+}
+
+p {
+    color: $light-grey;
+}
+
 
 
 
@@ -326,13 +337,6 @@ a:hover {
 .header {
     padding: 0 1em 0.5em;
     height: 35px;
-    h1 {
-        color: $blue;
-        text-shadow: 1px 1px 1px #000;
-        font-weight: 100;
-        font-size: 1.5em;
-
-    }
     .tab {
         position: absolute;
         width: 80px;
@@ -366,6 +370,16 @@ a:hover {
 
 
 
+
+.login-page {
+    padding: 1em;
+    .fa-twitter-square {
+        color: $blue;
+        position: relative;
+        top: 10px;
+        padding-right: 0.5em;
+    }
+}
 
 
 
