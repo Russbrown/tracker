@@ -230,10 +230,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e5260', end
     box-shadow: 1px 1px 1px #353842;
 }
 
+$blue: #4a70e1;
+
+$pale-blue: #cdd0de;
+
+$dark-blue: #3a3f4e;
+
+$light-grey: #8d9099;
+
+
+
 body {
     font-family: 'Cutive', sans-serif;
-    background: #3a3f4e;
+    background: $dark-blue;
 }
+
+a {
+    color: $pale-blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $light-grey;
+}
+
 
 
 
@@ -255,8 +275,8 @@ body {
         height: 40px;
         border: none;
         float: left;
-        background: #c0c7dc;
-        color: #8d9099;
+        background: $pale-blue;
+        color: $light-grey;
         text-indent: 1em;
         font-family: 'Cutive', sans-serif;
         padding: 5px 0 0 0;
@@ -268,8 +288,8 @@ body {
         width: 23%;
         height: 45px;
         border: none;
-        background: #4a70e1;
-        color: #cdd0de;
+        background: $blue;
+        color: $pale-blue;
         @include shadow;
         font-family: 'Cutive', sans-serif;
         padding: 5px 0 0 0;
@@ -285,21 +305,17 @@ body {
             position: absolute;
             top: -3px;
             left: -3px;
-            color: #4a70e1;
+            color: $blue;
         }
     }
     .tracker {
         padding: 0 1em;
         p {
-            color: #cdd0de;
+            color: $pale-blue;
             font-size: 0.9em;
         }
-        p a {
-            color: #cdd0de;
-            text-decoration: none;
-        }
         p small {
-            color: #989ba4;
+            color: $light-grey;
             font-size: 0.8em;
             clear: both;
         }
@@ -309,7 +325,7 @@ body {
     padding: 0 1em 0.5em;
     height: 35px;
     h1 {
-        color: #4a70e1;
+        color: $blue;
         text-shadow: 1px 1px 1px #000;
         font-weight: 100;
         font-size: 1.5em;
@@ -321,10 +337,10 @@ body {
         right: 0;
         width: 80px;
         height: 30px;
-        background: #cdd0de;
+        background: $pale-blue;
         text-align: center;
         a {
-            color: #4a70e1;
+            color: $blue;
             text-decoration: none;
             line-height: 30px;
         }
@@ -332,7 +348,7 @@ body {
 }
 .timestamp {
     font-size: 0.7em;
-    color: #989ba4;
+    color: $light-grey;
     text-align: right;
     float: right;
     padding-right: 1em;
