@@ -354,10 +354,11 @@ p {
     .tab.login {
         top: 0;
         right: 0;
+        display:none;
     }
     .tab.bug {
         top: 0;
-        right: 90px;
+        right: 1em;
     }
 }
 .timestamp {

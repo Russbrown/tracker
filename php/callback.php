@@ -38,3 +38,4 @@ if (200 == $connection->http_code) {
   /* Save HTTP status for error dialog on connnect page.*/
   header('Location: ./clearsessions.php');
 }
+
