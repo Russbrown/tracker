@@ -290,7 +290,7 @@ p {
         float: left;
         background: $pale-blue;
         color: $light-grey;
-        text-indent: 1em;
+        text-indent: 1.75em;
         font-family: 'Cutive', sans-serif;
         padding: 5px 0 0 0;
         margin: 0 0 0 0;
@@ -316,9 +316,21 @@ p {
         position: relative;
         i {
             position: absolute;
-            top: -3px;
-            left: -3px;
+            top: 14px;
+            left: 4px;
             color: $blue;
+            cursor: pointer;
+        }
+        i:after {
+            font-family: fontAwesome;
+            content: "\f0dd";
+            font-size: 0.75em;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 10px;
+            left: 5px;
+            color: #777;
         }
     }
     .tracker {
@@ -339,7 +351,7 @@ p {
     height: 35px;
     .tab {
         position: absolute;
-        width: 80px;
+        width: 90px;
         height: 30px;
         background: $pale-blue;
         text-align: center;

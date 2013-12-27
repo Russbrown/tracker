@@ -1,23 +1,7 @@
 $(function(){
-	$('.js-trackStories').bind('click', function(){
-		var trackVal = $(this).siblings('.js-trackVal').val();
-		var trackID = $(this).parents('form').siblings('.tracker').attr('id');
-		getStories(trackVal, trackID);
-		$(this).parents('.tracker-wrapper').addClass('active');
-		// Save data to the current local's store
-		localStorage.setItem(trackID, trackVal);
-		return false;
-	});
-
-	$('.js-trackTweets').bind('click', function(){
-		var trackVal = $(this).siblings('.js-trackVal').val();
-		var trackID = $(this).parents('form').siblings('.tracker').attr('id');
-		getTweets(trackVal, trackID);
-		$(this).parents('.tracker-wrapper').addClass('active');
-		// Save data to the current local's store
-		localStorage.setItem(trackID, trackVal);
-		return false;
-	});
+	
+	// bind the trakrs to stories or tweets
+	bindTrakrs();
 
 	// See if we have a trakr set
 	if ((localStorage.getItem('tracker1')) || (localStorage.getItem('tracker2')) || (localStorage.getItem('tracker3'))) {
@@ -39,6 +23,33 @@ $(function(){
 		introJs().start();		
 	}
 
+	// toggle the trakr source
+	$('.tracker-wrapper form i').bind('click', function(){
+		if ($(this).hasClass('fa-list-alt')) {
+			// swap the icon
+			$(this).addClass('fa-twitter-square');
+			$(this).removeClass('fa-list-alt');
+			// swap the js-hook
+			$(this).siblings('.submit').removeClass('js-trackStories');
+			$(this).siblings('.submit').addClass('js-trackTweets');
+			$(this).parents('form').siblings('.tracker').removeClass('stories');
+			$(this).parents('form').siblings('.tracker').addClass('tweets');
+			// unbind the old hook
+			bindTrakrs();
+		} else {
+			// swap the icon
+			$(this).addClass('fa-list-alt');
+			$(this).removeClass('fa-twitter-square');
+			// swap the js-hook		
+			$(this).siblings('.submit').removeClass('js-trackTweets');
+			$(this).siblings('.submit').addClass('js-trackStories');
+			$(this).parents('form').siblings('.tracker').removeClass('tweets');
+			$(this).parents('form').siblings('.tracker').addClass('stories');
+			// unbind the old hook
+			bindTrakrs();
+		}
+	});
+
 	setInterval(function(){
 		// iterate through the trackers
 		$('.tracker-wrapper').each(function(){
@@ -54,8 +65,7 @@ $(function(){
 			}
 		});
 	}, 1200000); // 1200000 =  Every 20 mins.. I think.
-
-});		
+});	
 
 function getStories(trackVal, trackID){
 	$.ajax({
@@ -67,7 +77,7 @@ function getStories(trackVal, trackID){
 			console.log('error');
 		},
 		success:function(data){
-			console.log(data);
+			// console.log(data);
 			var i = 0;
 			if ($('#' + trackID).parents('.tracker-wrapper').hasClass('active')) {
 				$('#' + trackID).empty();
@@ -96,6 +106,7 @@ function getTweets(trackVal, trackID){
 			console.log('error');
 		},
 		success:function(data){
+			console.log(data);
 			$('#' + trackID).empty();
 			$.each(data.statuses, function(index) {
 				if (index < 4) {
@@ -118,6 +129,31 @@ function getTweets(trackVal, trackID){
 	});
 }
 
+function bindTrakrs() {
+	// set the story trakr and run it
+	$('.js-trackStories').unbind();
+	$('.js-trackStories').bind('click', function(){
+		var trackVal = $(this).siblings('.js-trackVal').val();
+		var trackID = $(this).parents('form').siblings('.tracker').attr('id');
+		getStories(trackVal, trackID);
+		$(this).parents('.tracker-wrapper').addClass('active');
+		// Save data to the current local's store
+		localStorage.setItem(trackID, trackVal);
+		return false;
+	});
+
+	// set the tweet trakr and run it
+	$('.js-trackTweets').unbind();
+	$('.js-trackTweets').bind('click', function(){
+		var trackVal = $(this).siblings('.js-trackVal').val();
+		var trackID = $(this).parents('form').siblings('.tracker').attr('id');
+		getTweets(trackVal, trackID);
+		$(this).parents('.tracker-wrapper').addClass('active');
+		// Save data to the current local's store
+		localStorage.setItem(trackID, trackVal);
+		return false;
+	});
+}
 
 
 

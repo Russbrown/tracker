@@ -40,13 +40,14 @@ session_start();
                 <a href="/php/twitter_login.php">Log in</a>
             </div>  
             <div class="tab bug">
-                <a href="https://github.com/Russbrown/tracker" target="_blank">Bug?</a>
+                <a href="https://github.com/Russbrown/tracker" target="_blank">Feature?</a>
             </div>      
         </div>
 
 
         <div class="tracker-wrapper" >
             <form data-position="bottom" data-intro="Ok let's get started, first why not track your football team..." data-step="1">
+                <i class="fa fa-list-alt fa-lg"></i>                
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
@@ -56,6 +57,7 @@ session_start();
 
         <div class="tracker-wrapper" >
             <form data-position="bottom" data-intro="..then your city..." data-step="2">
+                <i class="fa fa-list-alt fa-lg"></i>
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
@@ -65,6 +67,7 @@ session_start();
 
         <div class="tracker-wrapper">
             <form data-position="bottom" data-intro="...then something you're interested in. Like err...Yoga?" data-step="3">
+                <i class="fa fa-list-alt fa-lg"></i>
                 <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
                 <input type="submit" class="js-trackStories submit" value="Track"/>
             </form>
@@ -105,7 +108,7 @@ session_start();
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
-        <script src="js/main.min.js"></script>
+        <script src="js/main.js"></script>
         <script src="js/intro.min.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
