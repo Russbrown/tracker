@@ -34,75 +34,75 @@ session_start();
 
 
         <!-- Add your site or application content here -->
-        <div class="header">
-        <h1>Trakrific</h1>
-<!--             <div class="tab login">
-                <a href="/php/twitter_login.php">Log in</a>
-            </div>  
-            <div class="tab bug">
-                <a href="https://github.com/Russbrown/tracker" target="_blank">Feature?</a>
-            </div>   -->    
-        </div>
+        <div class="page">
+            <div class="header">
+            <h1>Trakrific</h1>
+    <!--             <div class="tab login">
+                    <a href="/php/twitter_login.php">Log in</a>
+                </div>  
+                <div class="tab bug">
+                    <a href="https://github.com/Russbrown/tracker" target="_blank">Feature?</a>
+                </div>   -->    
+            </div>
+            <div class="tracker-wrapper" >
+                <form data-position="bottom" data-intro="Ok let's get started, first why not track your football team..." data-step="1">
+                    <i class="fa fa-list-alt fa-lg"></i>                
+                    <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
+                    <input type="submit" class="js-trackStories submit" value="Track"/>
+                </form>
+                <div id="tracker1" class="tracker stories"><!-- Story Tracker 1 --></div>
+                <div class="timestamp"></div>
+            </div>
 
+            <div class="tracker-wrapper" >
+                <form data-position="bottom" data-intro="..then your city..." data-step="2">
+                    <i class="fa fa-list-alt fa-lg"></i>
+                    <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
+                    <input type="submit" class="js-trackStories submit" value="Track"/>
+                </form>
+                <div id="tracker2" class="tracker stories"><!-- Story Tracker 2 --></div>
+                <div class="timestamp"></div>
+            </div>
 
-        <div class="tracker-wrapper" >
-            <form data-position="bottom" data-intro="Ok let's get started, first why not track your football team..." data-step="1">
-                <i class="fa fa-list-alt fa-lg"></i>                
-                <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
-                <input type="submit" class="js-trackStories submit" value="Track"/>
-            </form>
-            <div id="tracker1" class="tracker stories"><!-- Story Tracker 1 --></div>
-            <div class="timestamp"></div>
-        </div>
+            <div class="tracker-wrapper">
+                <form data-position="bottom" data-intro="...then something you're interested in. Like err...Yoga?" data-step="3">
+                    <i class="fa fa-list-alt fa-lg"></i>
+                    <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
+                    <input type="submit" class="js-trackStories submit" value="Track"/>
+                </form>
+                <div id="tracker3" class="tracker stories"><!-- Story Tracker 3 --></div>
+                <div class="timestamp"></div>
+            </div>
 
-        <div class="tracker-wrapper" >
-            <form data-position="bottom" data-intro="..then your city..." data-step="2">
-                <i class="fa fa-list-alt fa-lg"></i>
-                <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
-                <input type="submit" class="js-trackStories submit" value="Track"/>
-            </form>
-            <div id="tracker2" class="tracker stories"><!-- Story Tracker 2 --></div>
-            <div class="timestamp"></div>
-        </div>
+            <div class="tracker-wrapper">
+                <form>
+                    <i class="fa fa-twitter-square fa-lg"></i>
+                    <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
+                    <input type="submit" class="js-trackTweets submit" value="Track"/>
+                </form>
+                <div id="tracker4" class="tracker tweets"><!-- Tweet Tracker 4 --></div>
+                <div class="timestamp"></div>
+            </div>
 
-        <div class="tracker-wrapper">
-            <form data-position="bottom" data-intro="...then something you're interested in. Like err...Yoga?" data-step="3">
-                <i class="fa fa-list-alt fa-lg"></i>
-                <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
-                <input type="submit" class="js-trackStories submit" value="Track"/>
-            </form>
-            <div id="tracker3" class="tracker stories"><!-- Story Tracker 3 --></div>
-            <div class="timestamp"></div>
-        </div>
+            <div class="tracker-wrapper">
+                <form>
+                    <i class="fa fa-twitter-square fa-lg"></i>
+                    <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
+                    <input type="submit" class="js-trackTweets submit" value="Track"/>
+                </form>
+                <div id="tracker5" class="tracker tweets"><!-- Tweet Tracker 5 --></div>
+                <div class="timestamp"></div>
+            </div>
 
-        <div class="tracker-wrapper">
-            <form>
-                <i class="fa fa-twitter-square fa-lg"></i>
-                <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
-                <input type="submit" class="js-trackTweets submit" value="Track"/>
-            </form>
-            <div id="tracker4" class="tracker tweets"><!-- Tweet Tracker 4 --></div>
-            <div class="timestamp"></div>
-        </div>
-
-        <div class="tracker-wrapper">
-            <form>
-                <i class="fa fa-twitter-square fa-lg"></i>
-                <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
-                <input type="submit" class="js-trackTweets submit" value="Track"/>
-            </form>
-            <div id="tracker5" class="tracker tweets"><!-- Tweet Tracker 5 --></div>
-            <div class="timestamp"></div>
-        </div>
-
-        <div class="tracker-wrapper">
-            <form>
-                <i class="fa fa-twitter-square fa-lg"></i>
-                <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
-                <input type="submit" class="js-trackTweets submit" value="Track"/>
-            </form>
-            <div id="tracker6" class="tracker tweets"><!-- Tweet Tracker 6 --></div>
-            <div class="timestamp"></div>
+            <div class="tracker-wrapper">
+                <form>
+                    <i class="fa fa-twitter-square fa-lg"></i>
+                    <input type="text" placeholder="Enter Story Keywords..." class="js-trackVal input"/>
+                    <input type="submit" class="js-trackTweets submit" value="Track"/>
+                </form>
+                <div id="tracker6" class="tracker tweets"><!-- Tweet Tracker 6 --></div>
+                <div class="timestamp"></div>
+            </div>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
