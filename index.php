@@ -11,7 +11,7 @@ session_start();
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Trakrific - Track the storys you're interested in</title>
+        <title>Trakrific - Track the stories you're interested in</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -36,13 +36,7 @@ session_start();
         <!-- Add your site or application content here -->
         <div class="page">
             <div class="header">
-            <h1>Trakrific</h1>
-    <!--             <div class="tab login">
-                    <a href="/php/twitter_login.php">Log in</a>
-                </div>  
-                <div class="tab bug">
-                    <a href="https://github.com/Russbrown/tracker" target="_blank">Feature?</a>
-                </div>   -->    
+            <h1>Trakrific</h1>  
             </div>
             <div class="tracker-wrapper" >
                 <form data-position="bottom" data-intro="Ok let's get started, first why not track your football team..." data-step="1">
