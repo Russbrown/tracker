@@ -111,9 +111,7 @@ function getTweets(trackVal, trackID){
 			$.each(data.statuses, function(index) {
 				if (index < 4) {
 						var item = 
-							'<p><a href="' + 
-							data.statuses[index].entities.media[0].url + 
-							'" target="_blank">' + 
+							'<p>' + 
 							data.statuses[index].text + 
 							'</p>';
 						$('#' + trackID).append(item);			
