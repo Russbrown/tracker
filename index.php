@@ -105,7 +105,7 @@ session_start();
         <script src="js/main.js"></script>
         <script src="js/intro.min.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- Google Analytics -->
         <script type="text/javascript">
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-46491879-1']);
@@ -118,23 +118,5 @@ session_start();
           })();
         </script>
 
-        <!-- AddThis Smart Layers BEGIN -->
-        <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
-        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-529adc0c2c00d788"></script>
-        <script type="text/javascript">
-          addthis.layers({
-            'theme' : 'transparent',
-            'share' : {
-              'position' : 'left',
-              'numPreferredServices' : 5
-            }, 
-            'follow' : {
-              'services' : [
-                {'service': 'twitter', 'id': 'therusstler'}
-              ]
-            }   
-          });
-        </script>
-        <!-- AddThis Smart Layers END -->
     </body>
 </html>
